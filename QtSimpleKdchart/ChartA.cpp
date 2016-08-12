@@ -13,12 +13,10 @@ using namespace KDChart;
 ChartA::ChartA( QWidget *parent):
     QWidget(parent),
     ui(new Ui::ChartA)
-{
-    QHBoxLayout* chartLayout = new QHBoxLayout( this );
-
+{    
     ui->setupUi(this);
     m_chart = new Chart();
-    chartLayout->addWidget( m_chart );
+    ui->horizontalLayout->addWidget(m_chart);
 
     m_model.loadFromCSV( ":/barSimple.csv" );
 
