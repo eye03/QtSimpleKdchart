@@ -54,7 +54,10 @@ FORMS    += widget.ui \
     ChartA.ui
 
 #KDChart
+unix:!macx: LIBS += -L$$PWD/KDChart-2.6.0/lib/ -ltesttools
+unix:!macx: LIBS += -L$$PWD/KDChart-2.6.0/lib/ -lkdchart
+
 INCLUDEPATH += $$PWD/KDChart-2.6.0/include/KDChart
-LIBS += $$PWD/KDChart-2.6.0/lib/libkdchart.so.2.6.0 \
-              $$PWD/KDChart-2.6.0/lib/libtesttools.so.2.6.0
+DEPENDPATH += $$PWD/KDChart-2.6.0/include/KDChart
+
 RESOURCES += QtSimple.qrc
