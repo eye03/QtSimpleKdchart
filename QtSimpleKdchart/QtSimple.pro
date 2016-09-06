@@ -13,6 +13,9 @@ TEMPLATE = app
 
 win32{
 OS=windows
+TARGET = G48ClientWin
+LIBS += -L$$PWD/KDChart-2.6.0/lib/win32 -lkdchart2 -ltesttools2
+INCLUDEPATH += $$PWD/KDChart-2.6.0/include/KDChart
 }
 unix:!macx{
 OS=linux
